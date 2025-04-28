@@ -28,9 +28,9 @@ class JobsdataTable(Model):
     
     id: Mapped[int] = mapped_column(primary_key=True)
     job_id: Mapped[int] = mapped_column(ForeignKey('jobs.id'))
-    sch: Mapped[str]
-    emp: Mapped[str]
-    exp: Mapped[str]
+    schedule: Mapped[str]
+    employment: Mapped[str]
+    experience: Mapped[str]
     
     
 

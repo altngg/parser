@@ -31,9 +31,9 @@ class JobRepository:
 
         new_vacancy_data = JobsdataTable(
             job_id=new_vacancy.id,
-            sch=vacancy['schedule'],
-            emp=vacancy['employment'],
-            exp=vacancy['experience']
+            schedule=vacancy['schedule'],
+            employment=vacancy['employment'],
+            experience=vacancy['experience']
         )
         session.add(new_vacancy_data)
         await session.commit()
@@ -51,9 +51,9 @@ class JobRepository:
                     results_data.append(JobSchema(
                         id=job.id,
                         name=job.name,
-                        sch=job_data.sch,
-                        emp=job_data.emp,
-                        exp=job_data.exp
+                        schedule=job_data.schedule,
+                        employment=job_data.employment,
+                        experience=job_data.experience
                     ))
             return results_data
     
