@@ -1,8 +1,8 @@
 from typing import List
 from fastapi import APIRouter
-from db import create_tables, delete_tables
-from models import JobAdd, JobSchema
-from repository import JobRepository
+from database.db import create_tables, delete_tables
+from models.models import JobAdd, JobSchema
+from database.repository import JobRepository
 
 router = APIRouter(prefix="/vacancy")
 

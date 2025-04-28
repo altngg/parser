@@ -1,8 +1,8 @@
 from sqlalchemy import select
 from typing import List
-from db import new_session, JobsdataTable, JobsnameTable
-from models import JobAdd, JobSchema
-from parser import get_vacancies  
+from database.db import new_session, JobsdataTable, JobsnameTable
+from models.models import JobAdd, JobSchema
+from database.parser_1 import get_vacancies  
 
 class JobRepository:
     @classmethod
