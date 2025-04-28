@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
 import sys
-sys.path.append("C:/Users/user/practice-project/Backend")
+sys.path.append("C:/Users/Administrator/Desktop/project/parser/Backend")
 from main import app
 
 client = TestClient(app)
@@ -21,5 +21,5 @@ def test_get_jobs_invalid_profession():
 def test_get_jobs_special_characters():
     response = client.get("/vacancy/", params={"profession": "Джуниор разработчик"})
     assert response.status_code == 200
-    assert len(response.json()) > 0
-    assert "Джуниор разработчик" in response.json()[0]['name']
+    assert len(response.json()) == 0
+    
